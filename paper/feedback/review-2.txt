@@ -1,0 +1,35 @@
+Title: Container vs. Virtual Machines: An Survey on Latency Optimizations
+Author: Yiyang Xie
+
+Summary:
+The paper explores latency optimizations for virtualization with a focus on virtual machine and containers especially. Virtualization is the transformation of physical resources into logically manageable resources breaking the barriers between physical structures. While virtual machines run a full OS with either a host OS installed or not, containers don't and only encapsulate no larger content than an App and all its required files. Since virtual machines occupy more resources they are able to run more operations, even with business-critical data, compared to containers, while containers are very convenient to move between multiple environments. To optimize measurements hardware timestamps instead of software timestamps can be used to improve the accuracy and the usage of measurement systems with the highest possible precision, to obtain more precise measurement results, is a basic prerequisite for scientific experiments. Optimizing performance can be done by disabling virtual cores, enabling core isolation, reducing the number of CPU OS interrupts and disabling energy saving mechanism. Those are only used in case of virtual machine based virtualization. Container based virtualization can improve its latency by network slicing and even if containers crash during operation, which affects the performance of other containers, their performance is still better than that of virtual machines. At last optimization can be realized as a hybrid virtualization approach that uses a virtual machine as the lightweight host OS, with the upper layer interacting further with containers. 
+
+Strengths of the paper:
+The paper has a good structure and from a broader overall introduction of virtualization techniques goes into more detail as it progresses until it lastly shows optimization options of the introduced virtualization techniques. The content of the paper is limited to what is really important for the continuation and understanding of the paper and the reader is presented with the structure of the paper at the introduction. The content of used sources is represented correctly and always cited. The presented explanations are underlined with examples (some marked with orange in the paper). They are presented in an understandable way and in case of virtual machines and container further represented by figures. The figures are well-structured and easy to understand and furthermore additionally explained in text form. The paper gathered optimization option from different papers and listed them in a coherent and understanding way in here, giving an easy overview over the options as well as the different types of possible virtualization providing additional value compared to the sources as it brings all these point together. The conclusion is clearly stated. This paper is worth being published.
+
+Weaknesses of the paper:
+The goal of the paper is not clearly stated except in the abstract. There is a repetition of the explanation of the virtualization marked in yellow in the paper. The second paragraph of section 2 misses its source. Only in section 5.2 it is mentioned that the above stated optimizations in section 5.1 are only for virtual machines.
+
+Questions to the author:
+In section 5.2.2 it is stated that by leveraging the benefits the performance of communication can be predictably further improved but then it states that experimental results from one survey have shown that the performance of virtual machines mixed with containers is unimaginably worse, so how come it can be improved this way if it was already disproved?
+In section 6 why is a direct citation at the end without a source? 
+Otherwise, I understood the topics you presented and was able to follow your trail of thought through the paper. 
+
+Correctness:
+There are a few sections marked in blue in the paper. Here either the sentence doesn't seem coherent or the structure of the sentence seems weird. Furthermore at some points a 'the' is missing and a lot of repetition successively is used. In section 6 there is a direct citation without a source. Additionally I marked the terms suggested we should look out for in red. The repeated use of a few of those words can be found, some of those redundant. Topic wise the sources named indeed contain the cited content. The author distinguished between opinion and fact except maybe in section 5.2 as predictions can be viewed as subjective. The required number of pages is also met as well as the formatting of the paper while the sources go over to a fifth page.  
+
+Overall feedback:
+At first glance the aesthetic of the paper on the first page is great but looking at the next pages gets cluttered since there are so many subsections and many changes between thick and thin printed words. Looking at the figures on the other hand, especially through the different colors, the different section come out nicely, and they are easily understood. Overall this is a paper with a good structure and its easy to follow. After reading, it I'm able to understand what the goal was and how it was accomplished. I have an understanding of the content covered in the single sections since there is a clearly visible listing structure and one explanations doesn't mix with another like the different explained optimization possibilities. Furthermore the explanation of the structure of the virtual machine and container are underlined through examples. There are some minor grammar and sentence structure issues that can be corrected but all expected requirements are met.
+
+Reviewer's confidence: 4
+ 5: (expert)
+ 4: (high)
+ 3: (medium)
+ 2: (low)
+ 1: (none)
+
+Evaluation: 1
+ 2: accept
+ 1: weak accept
+ -1: weak reject
+ -2: reject

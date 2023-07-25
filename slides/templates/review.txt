@@ -1,0 +1,34 @@
+Title: <insert here>
+Author: <insert here>
+
+Summary:
+<insert here>
+
+Strengths of the paper:
+<insert here>
+
+Weaknesses of the paper:
+<insert here>
+
+Questions to the author:
+<insert here>
+
+Correctness:
+<insert here>
+
+Overall feedback:
+<insert here>
+
+Reviewer's confidence: <insert number here>
+  5: (expert)
+  4: (high)
+  3: (medium)
+  2: (low)
+  1: (none)
+
+Evaluation: <insert number here>
+  2: accept
+  1: weak accept
+ -1: weak reject
+ -2: reject
+

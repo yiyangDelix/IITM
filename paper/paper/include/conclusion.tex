@@ -1,0 +1,30 @@
+\section{Conclusion}
+In conclusion, the core meaning of virtualization technology is to enable computing
+environments to run multiple independent systems simultaneously\cite{b18}.
+Both VMs and containers are encapsulated computing environments that
+combine various IT components and are independent of the rest of the system.
+The main differences between the two are the magnitude, scalability and portability\cite{b15}.
+In contrast to the structure of VMs, containers are lightweight, easier to deploy, because they do not
+have a separate OS, all containers share the same OS with the host.
+This offers the possibility to reduce the latency of virtualization continuously.
+However, as an emerging technology, containers are poorly isolated.
+Only the CPU can be well isolated, but the memory, disk and network can't be ideally isolated\cite{b8}.
+This also presents hidden risks to the reliability of communication.
+
+URLLC has very demanding requirements for low latency.
+Therefore, improving accuracy and precision is essential for reliable latency measurements.
+
+From the latency measurement results, the performance of the latency optimization
+on bare metal, VMs and containers in the lab's operating environment is satisfactory.
+People can optimize the virtualized systems based on VMs by enabling core isolation,
+reducing the number of CPU interrupts, as well as disabling virtual cores and energy
+saving mechanism, etc.
+For the virtualized systems based on containers, people can choose a lightweight container,
+optimize container images, use a high-performance storage driver, host networking and resource limits.
+With all these mentioned optimization methods, the latency peaks can be significantly reduced even in extreme cases.
+
+The other potentially viable optimization option is a hybrid virtualization approach
+that uses a VM as the lightweight host OS, with the upper layer interacting
+further with containers.
+By leveraging the benefits of each, the performance of communication can be predictably
+further improved.

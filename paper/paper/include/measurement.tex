@@ -1,0 +1,41 @@
+\section{Optimization of Measurements}
+The purpose of optimization of measurements is to reduce the impact caused by human or physical
+hardware factors, i.e.\ delays that do not originate from the communication technology itself.
+
+\subsection{Accuracy vs. Precision}
+The quality of latency measurements can be evaluated in two dimensions: accuracy and
+precision\cite{b13}.
+For general measurements, accuracy will be considered as the magnitude of the difference
+between the timestamp of the measurement result and the actual occurrence of the event,
+i.e.\ the round trip time spent to transmit the data of the measurement result.
+Precision is defined as the statistical variability between measurements, i.e.\ the degree
+of variability and fluctuation of values between multiple measurement results.
+
+\subsubsection{Hardware Timestamp}
+Data reception on modern servers occurs asynchronously, i.e.\ the NIC receives the packet
+first, then it is forwared to random access memory (RAM). Finally, the reception is
+signaled to the CPU\cite{b13}.
+Due to the interrupts caused by system calls of the OS\cite{b2}, the round-trip time
+increases, resulting in a delay in the software timestamp, which further generates a
+measurement latency and a significant decrease in the accuracy.
+
+A feasible solution is to use hardware timestamps.
+After the packet is received by the NIC itself, the hardware device responds with
+the shortest clock to timestamp the packet accurately, since the hardware timestamp
+is not affected by OS interrupts\cite{b13}.
+
+\subsubsection{Measurement Error Tolerance}
+According to the URLLC, the end-to-end latency must be
+less than $\si{1}{ms}$ and the communication reliability must be greater
+than 99.999\% etc.\cite{b3,b4,b5}.
+Therefore, a slightly large error would cause a catastrophic impact on the latency
+measurement results, e.g. an error of 1ms is enough to completely
+change the optimization results under URLLC.
+
+The usage of measurement systems with the highest possible precision to obtain more precise
+measurement results is a basic prerequisite for scientific experiments.
+
+
+
+
+

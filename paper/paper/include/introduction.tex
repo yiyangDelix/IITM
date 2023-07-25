@@ -1,0 +1,28 @@
+\section{Introduction}
+5G networks provide dedicated services for URLLC, and the requirements of the International
+Telecommunication Union (ITU)~\cite{b24,b14} for URLLC services are defined as follows: the
+unidirectional delay from source to destination of a 5G radio access network (RAN) must not
+exceed $\si{1}{ms}$, and the delivery success rate must be higher than 99.999\%.
+These requirements are extremely demanding for the systems that involve virtualization
+management.
+The virtualization of operating systems (OS) allow multiple applications,
+in an environment sharing the identical host OS, to operate isolatedly.
+This has the advantages of fast bootup, easy deployment, low resource consumption and high
+operational efficiency\cite{b6}, but also suffers from weak isolation, unstable communication
+connections and high network latency\cite{b15}.
+The latter prevents the successful performance of URLLC.
+This work summarizes the latest sophisticated virtualization methods and makes an examination
+of latency optimization methods in order to find virtualization solutions that support the
+URLLC service level.
+
+This paper is structured as follows.
+In Section 2 the background is presented, while in Section 3 we focus on
+comparing container virtualization technology with virtual machine virtualization technology
+and summarizing the characteristics of the two OS virtualization technologies.
+The latency emerges as measurement latency and performance latency, both should be avoided.
+In Section 4, it is about optimizing the latency caused by the measurement process.
+The quantifying criteria and prerequisites for measurements are provided as well.
+In Section 5, the available and the potential performance latency optimization methods
+are overviewed.
+Finally, we obtain the conclusion in Section 6 and outline the challenges faced by
+virtualization techniques and the outlook for future research.

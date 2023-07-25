@@ -1,0 +1,49 @@
+Title: Increase the Latency: Emulation Approaches for Real Network Conditions
+Author: Lukas Haneberg
+
+Summary:
+This article is about simulation methods for real networks with a focus on simulating latency. The cost of using real networks for testing is very high, so various companies and institutes are trying to simulate real network environments to test hardware and software. The ability of an emulation technique to restore as much real events and details as possible is an important factor for us to measure the effectiveness of the emulation technique.
+The challenge with emulated testbeds is that the testbed network setup is usually hosted in a single location, with small network coverage, short cable lengths and no additional network nodes to connect to.
+The differences between network simulation and network emulation are that Network simulation has lower limits, so it cannot reproduce the real situation of a production network. Network emulation can simulate various behaviors of hardware and software, as well as more devices in the network. In addition, network emulation can simulate per-defined or random packet losses, delays and other disturbances in the communication process.
+After reading the article, it is clear that it is essential to implement simulation and emulation of real networks for business and research purposes. Traditional WAN emulation techniques are based on software emulation and hardware emulation. On the one hand, software emulators are less expensive, but they require more network configuration work and staff skills. On the other hand, Hardware emulators offer more services and features and simplify the installation and configuration process, but they have the disadvantage of high acquisition costs. For Fiber Optic Networks, Fiber Optic Delay Lines can provide more accurate network emulation as these devices are equipped with actual lengths of cable inside, which offers the possibility of hardware emulation rather than just simulating it in software. As technology continues to evolve, it remains challenging to strike a balance between performance and cost for testing in a network emulation environment.
+
+Strengths of the paper:
+1. The last paragraph of the introduction gives a very clear description of the structure of the text. This allows the reader to quickly understand the structure of the article and the reader can quickly find the specific chapter that interests him/her.
+2. The accurate data is used in the text, which improves the objectivity and credibility.
+
+Weaknesses of the paper:
+1. This abstract is a little redundant. The abstract should be a brief summary that gives the reader an immediate idea of the direction of the paper. However, it contains too much detail, e.g. the description of 'testbed', which distinguishes it from a real production network. In addition, the author describes various technical approaches to simulating realistic latency behavior. The examples of simulation techniques for Wide Area Network (WAN) and Fiber Optic Networks can be omitted.
+2. There is no clear comparison between NetEm and NistNet, Spirent Attero-100G and Apposite Technology Netropy 100G. After reading, it is difficulty to distinguish them except the names, because the descriptions are similar.
+3. Section 3 is very much like a manual. Too much data and less description can make the text boring and less readable.
+4. The entire section 3 and 4 are very long with few references. This reduces the objectivity of the article, because a single reference can only prove the opinion of one author or the results of an experiment.
+
+Questions to the author:
+1. NistNet, the predecessor of NetEm, is similar to the simulation methods it provides. The constant references to NistNet being similar to NetEm made my reading even more confusing. In addition, in section 2.4, even though a comparison is made between the two, the description is still unclear, with only the last sentence.
+2. Analogously, there is no comparison between Spirent Attero-100G and Apposite Technology Netropy 100G.
+
+Correctness:
+1. In part 2.2, "emulation" is defined. I think this word is crucial to the whole study or the whole article, so the definition of this word should be brought forward rather than in this subheading.
+2. In 2. section, some description needs to be added between each heading. Maybe a general introduction to Free Software Link Emulators could be added here.
+3. In sections 2.1 and 2.2, the authors give code examples. The examples of commands listed should be replaced with a different font than the text. Section 2.2 shows examples of commands without the "#", but in 2.1 there is a "#" as an identifier. In 2.3, the command example needs to be clearly identified by an identifier to indicate that the command here is two separate lines, e.g. each starting with "#".
+4. Sections 5.1 and 5.2 are not context relevant and so should not be subdivided in this way. After section 5, the author describes and characterizes Fiber Optic Delay Lines. In section 5.1, a specific example, the Fiberplus D8 Series, and its performance are described. But in section 5.2, the author shows a general overview of Fiber Optic Delay Lines again.
+
+Overall feedback:
+The English presentation throughout the article is clear and the overall formatting is up to standard. The article begins by explaining the premise of the study and the motivation for the study. This is followed by a division of the simulation techniques into software and hardware. This is followed by a comparison of the different techniques. Then the hardware prerequisites required to simulate a Fiber Optic Network are mentioned. Finally the full article is summarized and the dilemmas faced by network emulation are discussed.
+The article is presented through different perspectives and in multiple dimensions, which helps the reader to have a more comprehensive understanding of network emulation techniques. The article contains specific data, which adds to the accuracy and veracity of the description.
+Other advice for the content:
+1. Besides the Fiber Delay Lines (FDL), the description could also start with the Buffer in RAM, the use of FPGA network cards, etc. Because they may also affect the delay simulation of the network.
+2. Besides the Fiber Networks there are also copper networks, which can be compared in terms of performance or other characteristics of the two types of networks.
+
+
+Reviewer's confidence: 3
+  5: (expert)
+  4: (high)
+  3: (medium)
+  2: (low)
+  1: (none)
+
+Evaluation: 1
+  2: accept
+  1: weak accept
+ -1: weak reject
+ -2: reject

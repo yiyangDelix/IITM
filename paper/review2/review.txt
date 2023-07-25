@@ -1,0 +1,50 @@
+Title: Survey on the Chinese Governments Censorship Mechanisms
+Author: Raphael Stadler
+
+Summary:
+The entire article focuses on the Chinese government's research into network access restrictions. Overall, Great Firewall of China (GFW) is similar to a man-in-the-middle attack.
+The basic principles of the GFW implementation are based on the following methods, such as to implement subnet blocking and rerouting by modifying the routing table or the Border Gateway Protocol (BGP) prefix, DNS Poisoning, Encrypted DNS which works with third parties, Keyword Filtering and SNI-Filtering.
+Besides the above methods, GFW can only use more aggressive drop schemes, such as enhanced filtering algorithms, disabling Torrent files, limiting broadband, etc., to make end users actively reduce or abandon access, thus indirectly blocking the content of the communication or use a combination of these methods.
+On the other hand, there are also methods of bypassing GFW. They are based on proxies or VPNs, or use a web server proxy from another country or to use a SIM card from another country, which essentially allows the communication path to bypass the GFW altogether.
+One more advanced bypassing method is based on CDN. Besides mimicking encryption protocols, CDNs (Content Delivery Networks) can be used as fronting mechanism. So that when deploying a new communication tunnel, not only HTTPS forward proxies (V2Ray), but also HTTPS reverse proxy (nginx) can be used to allow customization of web server content. It deploys the specified services on commonly used legal platforms. GFW is forced to allow these websites and data, otherwise the loss outweighs the gain.
+GFW is currently trying to block these settings by restricting international CDNs and forcing companies to set up infrastructure in China. Their servers in China must comply with Chinese law, which makes it relatively easy for the government to access intermediate communications data or enforce their own policies on these companies. Companies that agree to this clause, e.g. Apple. Companies that reject it, e.g. Meta.
+As we can see after reading the article, GFW is a very powerful tool for the Chinese government's policy on internet regulation and strict censorship. GFW has been continuously improved over the years to cope with various openVPN, proxy, and other bypassing techniques. However, GFW is not perfect either and still cannot effectively filter communications based on methods such as CDNs. Striking the balance between isolation and over-isolation is still challenging.
+
+Strengths of the paper:
+1. The abstract is clear and concise which describes the whole article in a short paragraph. It focuses on the Chinese government's research of web access restrictions.
+2. The author makes good use of diagrams throughout the article. This expresses the abstract description visually, such as Man-in-the-MiddleAttack and the principle of the GFW.
+3. The author adds realistic examples after each description, such as the specific IP address, domain name and his experiments. This further enhances the realism and objectivity of the article and makes the reader believe what is written.
+4. The author has done experiments. This confirms author’s arguments through practice. In addition, the author controls variables when doing the experiment and does a comparison experiment. This clearly shows the different filtering and blocking techniques used by GFW and also shows that different websites get different results. This is better than summarizing the experimental results of others directly.
+
+Weaknesses of the paper:
+1. Abbreviations that appear for the first time need to be explained. This is to prevent conflicts of abbreviations and to reduce confusion for the non-specialist reader. For example, Authenticated encryption with associated data (AEAD), Man-in-the-middle attack (MITM), Border Gateway Protocol (BGP).
+2. At the end of the Introduction, the author can add a description of the structure of the article. For example, "The 2. part focuses on the most basic blocking methods used by GFW. Then, in the 3. section, the article is devoted to describing existing GFW bypass techniques and explaining why GFW needs to be constantly improved and upgraded. Section 4 …..."
+
+Questions to the author:
+1. What is the priority of blocking? Is it just "This site has bad information, please block it" and then GFW decides for itself? And what is the blocking method? IP blocking, DNS pollution, or keywords Filtering?
+2. What is the workload of GFW? Is there still capacity, or does GFW often have to give up detecting some of the traffic?
+3. As QUIC technology continues to mature, more and more traffic is being sent using this new protocol. NAT and VPN can also affect QUIC. If GFW accepts QUIC, is the bypassing method based on VPN still efficient?
+
+Correctness:
+1. Glossary should be uppercase, but prepositions like “the”, “of” do not need to be uppercase.
+2. Index Terms should be written in all lower case.
+
+Overall feedback:
+The whole article is well structured, starting with a summary of the general content of the article. After that is an introduction to the basic principles of GFW, i.e. the most basic filtering and blocking methods based on various network connections. Then, there is a further introduction to GFW's proven filtering and blocking methods for more advanced proxy technologies. This is followed by a discussion of the challenges faced by GFW, i.e. the problems that cannot be solved. Finally, the author makes experimental arguments, concludes and looks forward to his own discussion.
+The descriptions throughout are step-by-step, from the shallow to the deep, and the language used is concise and readable, except for some abbreviated words, which should be written in full when they first appear.
+The article is objective and the statements are supported by specific references (titles, page numbers, access locations). The diagrams within the article fit the content and are appropriate in number. In addition to the theoretical part of the argument, there is also a practical part of the argument that the author has made through experimentation.
+Advice for improvement.
+1. The author can provide more data on the results of the experiments, such as specific data on the output, or screenshots of the output, which would bring more credibility than a few sentences of summary.
+
+Reviewer's confidence: 4
+  5: (expert)
+  4: (high)
+  3: (medium)
+  2: (low)
+  1: (none)
+
+Evaluation: 2
+  2: accept
+  1: weak accept
+ -1: weak reject
+ -2: reject

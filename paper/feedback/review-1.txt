@@ -1,0 +1,60 @@
+Title: Container vs. Virtual Machines: An Survey on Latency Optimizations
+Author: Yiyang Xie
+
+Summary:
+The topic of the paper is the optimization of virtualized environments to meet the URLLC requirements.
+Specifically the latency optimization of containers and virtual machines are covered individually and compared.
+The Requirements for URLLC are explained, the history of virtualization and its growing overall importance is demonstrated.
+An introduction to the virtualization concepts VM and Containers is given, and they are compared.
+The optimization parameters are explained and consecutively the available performance optimization steps for VMs are illustrated.
+Finally, optimization potential for containers is displayed and the combination of containers and VMs is outlined.
+
+Strengths of the paper:
+This paper gives a good overview over the virtualization concepts of containers and VMs and how VMs can be optimized.
+It uses supportive figures to explain the virtualization concepts.
+It shows the parameters that can and need to be changed in order to improve latency in VMs.
+Furthermore, it is well described how the quality of latency measurements are evaluated, what the challenges are and how to solve them.
+
+Weaknesses of the paper:
+The main weakness of the paper is that it is quite unspecific when it comes to the main topic - the optimization.
+There is no section on available optimizations for Containers, if there are none this should be mentioned somewhere.
+The same weakness applies to the "Potential Optimization" section, there is no potential optimization for VMs mentioned.
+This makes it in the end very difficult to compare the two virtualization approaches when it comes to latency.
+Generally there are many unspecific sections where evidence based on sources or numbers is missing, as marked in yellow directly in the paper.
+In the Introduction it is mentioned that the scope of the paper is "to find virtualization solutions that support the URLLC service level" .
+However, it remains unclear whether this is possible or not.
+At the beginning of chapter 5 it is stated, that suggestions for potentially feasible latency optimizations are made.
+In the end this is not clearly stated.
+The use of figures and tables with specific numbers would support the explanations a lot.
+Especially a figure displaying all the optimizations made on VMs and how they affect latency would be very helpful.
+
+Questions to the author:
+Is it possible to optimize a VM that far that it can be used for URLLC purposes?
+What optimization possibilities are there for containers?
+What are specific latency optimizations that should be considered in the future?
+
+Correctness:
+The naming of the sections is not clear for the second and third section.
+Maybe it is possible to name them more specifically, my suggestions are in the annotated document.
+Please have a look at the title casing, as marked in orange in the annotated document.
+Please have a look at grammar and spelling mistakes.
+Please have a look at the duplicate sources.
+
+Overall feedback:
+The paper gives a good overview of virtualization through containers and VMs as well as on the latency optimization metrics.
+It lacks however a clear comparison of VMs and Containers when it comes to available optimizations and potential optimizations.
+Overall it is presenting interesting latency optimization approaches.
+
+Reviewer's confidence: 4
+  5: (expert)
+  4: (high)
+  3: (medium)
+  2: (low)
+  1: (none)
+
+Evaluation: 1
+  2: accept
+  1: weak accept
+ -1: weak reject
+ -2: reject
+
